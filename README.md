@@ -7,7 +7,7 @@
 2. Clone project
 
 ```bash
-    > git clone [https://github.com/ereyomi/construction-of-finger-print-door-opener.git](https://github.com/ereyomi/construction-of-finger-print-door-opener.git)
+git clone https://github.com/ereyomi/construction-of-finger-print-door-opener.git
 ```
 
 3. Download Arduino
