@@ -17,8 +17,9 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 */
 #define myRedLedPositive 10 // pin 10
 #define myGreenLedPositive 12
-#define buzzerPositive 13 // pin 9
+#define buzzerPositive 13 // pin 13
 #define RELAY 8           // pin 8
+#define relayVcc 7           // pin 7
 
 /* ------------------ */
 
@@ -48,9 +49,13 @@ void setup()
   pinMode(myRedLedPositive, OUTPUT);   // Set myRedLedPositive as OUTPUT pin
   pinMode(myGreenLedPositive, OUTPUT); // Set myGreenLedPositive as OUTPUT pin
   pinMode(buzzerPositive, OUTPUT);     // Set buzzer positive as Output pin
-
+  
   // initialize the LED pin as an output:
   pinMode(RELAY, OUTPUT);
+  pinMode(relayVcc, OUTPUT); // relay vcc pin: to be set to 5v
+
+  // write 5v to relay vcc
+  digitalWrite(relayVcc, HIGH);
 
   // put on red light on start
   digitalWrite(myRedLedPositive, HIGH);
